@@ -29,7 +29,7 @@ const Bar2 = () => {
   return (
     <div className="bar">
       <div className="headline-title">
-        Work Breakdown <i class="fa-solid fa-circle-info"></i>
+        Work Breakdown <i className="fa-solid fa-circle-info"></i>
       </div>
 
       <div className="work-content">

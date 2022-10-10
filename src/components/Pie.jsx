@@ -16,7 +16,7 @@ const PieCard = () => {
     <div className="pie">
       <div className="heading">
         <div className="headline-title">
-          Cycle Time <i class="fa-solid fa-circle-info"></i>
+          Cycle Time <i className="fa-solid fa-circle-info"></i>
         </div>
 
         <div className="chart">
@@ -62,7 +62,7 @@ const PieCard = () => {
         </div>
 
         <div className="growth">
-        <i class="fa-solid fa-arrow-up"></i> <span>24%</span>
+        <i className="fa-solid fa-arrow-up"></i> <span>24%</span>
         </div>
       </div>
     </div>

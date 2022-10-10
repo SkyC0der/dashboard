@@ -37,7 +37,7 @@ const Idle = () => {
     <div className="idleBar">
       <div className="headline-title">
         <div>
-          Idle Time Breakdown <i class="fa-solid fa-circle-info"></i>
+          Idle Time Breakdown <i className="fa-solid fa-circle-info"></i>
         </div>
         <ul>
           {data2.map((x, index) => (

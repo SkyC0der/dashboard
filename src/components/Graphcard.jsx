@@ -49,7 +49,7 @@ const Graphcard = ({title, stat}) => {
   return (
     <div className='graphcard'>
         <div className="headline-title">
-        {title} <i class="fa-solid fa-circle-info"></i>
+        {title} <i className="fa-solid fa-circle-info"></i>
       </div>
       <div className="chart">
         <h2>{stat}%</h2>

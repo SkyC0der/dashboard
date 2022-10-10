@@ -4,7 +4,7 @@ const Card = () => {
   return (
     <div className="card">
       <div className="headline-title">
-        Average PR size <i class="fa-solid fa-circle-info"></i>
+        Average PR size <i className="fa-solid fa-circle-info"></i>
       </div>
       <div className="stat-content">
         <div className="line__change">
@@ -21,11 +21,8 @@ const Card = () => {
         </div>
       </div>
       <div className="growth">
-        <i class="fa-solid fa-arrow-up"></i> <span>23%</span>
+        <i className="fa-solid fa-arrow-up"></i> <span>23%</span>
       </div>
-      {/* <div className="growth">
-        <i class="fa-solid fa-arrow-down"></i> <span>23%</span>
-        </div> */}
     </div>
   );
 };

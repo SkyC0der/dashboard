@@ -90,6 +90,18 @@ body {
 
   
   .siderHeading{
+    .title{
+      display: flex;
+      margin-bottom: 2rem;
+      justify-content: space-between;
+      align-items: center;
+      img{
+        margin-right: .5rem;
+      }
+      .text-bold{
+        font-size: 13px;
+      }
+    }
     display: flex;
     flex-direction: column;
     width: 100%;

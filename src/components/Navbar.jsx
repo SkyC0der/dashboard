@@ -21,6 +21,7 @@ import Idle from "./Idle";
 import People from "./People";
 import PieCard from "./Pie";
 import Pie from "./Pie";
+import Title from "./Title";
 
 const Navbar = () => {
   function getItem(label, key, children, type) {
@@ -147,6 +148,7 @@ const Navbar = () => {
           <div className="content-main">
             <Sider className="site-layout-background" width={190}>
               <div className="siderHeading">
+                <Title/>
                 <span className="header">Workflows</span>
                 <Select defaultValue="Product Dev">
                   <Option value="Product Dev">Product Dev</Option>
