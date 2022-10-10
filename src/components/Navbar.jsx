@@ -1,11 +1,14 @@
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
+  RightCircleOutlined,
+  LeftCircleOutlined,
   UploadOutlined,
   UserOutlined,
   VideoCameraOutlined,
   LaptopOutlined,
   NotificationOutlined,
+  EllipsisOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, Select } from "antd";
 import React, { useState } from "react";
@@ -15,13 +18,11 @@ import Card from "./Card";
 import Card2 from "./Card2";
 import Graphcard from "./Graphcard";
 import Idle from "./Idle";
+import People from "./People";
 import PieCard from "./Pie";
 import Pie from "./Pie";
 
-
-
 const Navbar = () => {
-
   function getItem(label, key, children, type) {
     return {
       key,
@@ -32,26 +33,22 @@ const Navbar = () => {
   }
 
   const { Header, Sider, Content } = Layout;
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const { Option } = Select;
   const menuData2 = [
-    getItem(
-      "Overview",
-      "1",
-      [
-        getItem("Project stats","2"),
-        getItem("Planning","3"),
-        getItem("Teamwork","4"),
-        getItem("Team Health","5"),
-        getItem("Investment","6"),
-      ]
-    ),
+    getItem("Overview", "1", [
+      getItem("Project stats", "2"),
+      getItem("Planning", "3"),
+      getItem("Teamwork", "4"),
+      getItem("Team Health", "5"),
+      getItem("Investment", "6"),
+    ]),
     getItem("Action Center", "7"),
     getItem("Apps", "8"),
     getItem("Tasks", "9"),
     getItem("Code Review", "10"),
     getItem("QA Review", "11"),
-    getItem("Notes", "12")
+    getItem("Notes", "12"),
   ];
   // const menuData = [
   //   "Overview",
@@ -120,21 +117,21 @@ const Navbar = () => {
             },
             {
               key: "6",
-              icon: <UploadOutlined />,
-              label: "nav 3",
+              icon: <People />,
+              label: "",
             },
           ]}
         />
       </Sider>
       <Layout className="site-layout">
         <Header
-          className="site-layout-background"
+          className="site-layout-background hea"
           style={{
             padding: 0,
           }}
         >
           {React.createElement(
-            collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+            collapsed ? RightCircleOutlined : LeftCircleOutlined,
             {
               className: "trigger",
               onClick: () => setCollapsed(!collapsed),
@@ -151,17 +148,11 @@ const Navbar = () => {
         >
           <div className="content-main">
             <Sider className="site-layout-background" width={200}>
-              <div>
-                <span>Workflow</span>
-                <Select
-                    defaultValue="Product Dev"
-                    style={{
-                      width: 120,
-                    }}
-                    
-                  >
-                    <Option value="lucy">Lucy</Option>
-                  </Select>
+              <div className="siderHeading">
+                <span className="header">Workflows</span>
+                <Select defaultValue="Product Dev">
+                  <Option value="All Time">All Time</Option>
+                </Select>
               </div>
               <Menu
                 mode="inline"
@@ -175,15 +166,17 @@ const Navbar = () => {
             </Sider>
             <div className="content">
               <div className="headingContent">
+                <div className="menuicon">
+                  <EllipsisOutlined style={{fontSize: "28px"}} />
+                </div>
                 <h2>Project Stats</h2>
                 <Select
-                  defaultValue="lucy"
+                  defaultValue="All Time"
                   style={{
                     width: 120,
                   }}
-                  
                 >
-                  <Option value="lucy">Lucy</Option>
+                  <Option value="All Time">All Time</Option>
                 </Select>
               </div>
               <div className="content-left">
@@ -198,16 +191,15 @@ const Navbar = () => {
                 <Idle />
               </div>
               <div className="content-bottom">
-                <div className="headline">
+                <div className="headingContent">
                   <h2>Planning</h2>
                   <Select
-                    defaultValue="lucy"
+                    defaultValue="All Time"
                     style={{
                       width: 120,
                     }}
-                    
                   >
-                    <Option value="lucy">Lucy</Option>
+                    <Option value="All Time">All Time</Option>
                   </Select>
                 </div>
                 <div className="card-container">

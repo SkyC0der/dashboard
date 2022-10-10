@@ -48,7 +48,7 @@ const Bar2 = () => {
         {/* <ResponsiveContainer width="100%" height="100%"> */}
         <BarChart
           layout="vertical"
-          width={600}
+          width={500}
           height={40}
           data={data1}
           margin={{ top: 10, right: 30, left: 20, bottom: 5 }}
