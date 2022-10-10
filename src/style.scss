@@ -34,6 +34,9 @@ body {
 .site-layout .site-layout-background{
   background: #fff;
 }
+.ant-layout-content.site-layout-background{
+  padding: 0;
+}
 .site-layout .hea {
   background: #fff;
   position: relative;
@@ -67,10 +70,12 @@ body {
 }
 .content-main {
   display: flex;
-  background-color: #e5e5e5;
+  padding:0;
+  background-color: #f0f2f5;
   aside {
-    margin-right: 3rem;
+    margin-right: 2rem;
     width: 15%;
+    padding: 1rem;
   }
 
   .ant-select{

@@ -142,16 +142,14 @@ const Navbar = () => {
           className="site-layout-background"
           style={{
             margin: "24px 16px",
-            padding: 24,
-            minHeight: 280,
           }}
         >
           <div className="content-main">
-            <Sider className="site-layout-background" width={200}>
+            <Sider className="site-layout-background" width={190}>
               <div className="siderHeading">
                 <span className="header">Workflows</span>
                 <Select defaultValue="Product Dev">
-                  <Option value="All Time">All Time</Option>
+                  <Option value="Product Dev">Product Dev</Option>
                 </Select>
               </div>
               <Menu
