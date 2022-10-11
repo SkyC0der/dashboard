@@ -53,7 +53,7 @@ const Idle = () => {
       </div>
       <div className="charts">
           <BarChart
-            width={500}
+            width={450}
             height={200}
             data={data}
             barGap={6}

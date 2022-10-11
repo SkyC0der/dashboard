@@ -45,7 +45,7 @@ const Bar2 = () => {
       </div>
 
       <div className="barchart">
-        <ResponsiveContainer width={500} aspect={9}>
+        <ResponsiveContainer width={450} aspect={9}>
           <BarChart
             layout="vertical"
             

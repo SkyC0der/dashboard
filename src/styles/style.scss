@@ -13,7 +13,11 @@ body {
   from { opacity: 1; }
   to   { opacity: 1; }
 }
-
+.ant-menu-title-content{
+  font-family: 'Nunito Sans';
+  font-weight: 700;
+  color: #03293D80;
+}
 .text-bold,
 h1,
 h2,
@@ -89,7 +93,7 @@ body {
   background-color: #f0f2f5;
   aside {
     margin-right: 2rem;
-    width: 15%;
+    width: 14%;
     padding: 1rem;
   }
 
@@ -163,7 +167,7 @@ body {
       display: flex;
       justify-content: space-between;
       padding: 1rem;
-      margin-top: 1rem;
+      margin-top: 2rem;
       width: 100%;
       grid-area: heading;
 
@@ -554,7 +558,7 @@ body {
       "footer   ";
   }
 }
-@media screen and (min-width: 850px) and (max-width: 1375px) {
+@media screen and (min-width: 850px) and (max-width: 1260px) {
   .content-main .content {
     .pie,
     .content-cards {
