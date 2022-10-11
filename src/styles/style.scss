@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Space+Grotesk:wght@600;700&display=swap");
+@import "./variables.scss";
+
 .text-bold,
 h1,
 h2,
@@ -31,30 +33,30 @@ body {
   margin: 16px;
   background: rgba(255, 255, 255, 0.3);
 }
-.site-layout .site-layout-background{
+.site-layout .site-layout-background {
   background: #fff;
 }
-.ant-layout-content.site-layout-background{
+.ant-layout-content.site-layout-background {
   padding: 0;
 }
 .site-layout .hea {
   background: #fff;
   position: relative;
 
-  span.anticon{
+  span.anticon {
     position: absolute;
     left: -3.5rem;
     top: 2rem;
     color: #fff;
     border-radius: 50%;
     font-size: 2rem;
-    background: rgba(255, 255, 255, 0.25);;
+    background: rgba(255, 255, 255, 0.25);
   }
 }
-.ant-menu-dark li:nth-of-type(6){
+.ant-menu-dark li:nth-of-type(6) {
   height: 100%;
 }
-.people{
+.people {
   padding: 1rem 0;
   display: flex;
   width: 100%;
@@ -62,7 +64,7 @@ body {
   flex-direction: column;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  img{
+  img {
     width: 25px;
     margin: 1rem 0;
     height: 25px;
@@ -70,7 +72,7 @@ body {
 }
 .content-main {
   display: flex;
-  padding:0;
+  padding: 0;
   background-color: #f0f2f5;
   aside {
     margin-right: 2rem;
@@ -78,27 +80,26 @@ body {
     padding: 1rem;
   }
 
-  .ant-select{
+  .ant-select {
     width: 90%;
-    .ant-select-selector{
+    .ant-select-selector {
       background: #fff;
     }
-    .ant-select-arrow{
+    .ant-select-arrow {
       margin-top: -12px;
     }
   }
 
-  
-  .siderHeading{
-    .title{
+  .siderHeading {
+    .title {
       display: flex;
       margin-bottom: 2rem;
       justify-content: space-between;
       align-items: center;
-      img{
-        margin-right: .5rem;
+      img {
+        margin-right: 0.5rem;
       }
-      .text-bold{
+      .text-bold {
         font-size: 13px;
       }
     }
@@ -107,18 +108,17 @@ body {
     width: 100%;
     margin-bottom: 1.5rem;
 
-    .header{
-      margin-bottom: .5rem;
-      color:  #03293D80;
-      
+    .header {
+      margin-bottom: 0.5rem;
+      color: #03293d80;
     }
-    .ant-select{
+    .ant-select {
       width: 90%;
       color: #03293d;
-      .ant-select-selector{
-        background: #03293D0D;
+      .ant-select-selector {
+        background: #03293d0d;
       }
-      .ant-select-arrow{
+      .ant-select-arrow {
         margin-top: -5px;
       }
     }
@@ -130,29 +130,43 @@ body {
     flex-wrap: wrap;
     width: 80%;
     position: relative;
-    .menuicon{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    grid-template-areas:
+      "heading heading heading heading"
+      "content1 content1 content2 content2"
+      "footer footer footer footer";
+    .menuicon {
       position: absolute;
       top: 0;
       right: -3rem;
     }
-    .headingContent{
+    .headingContent {
       display: flex;
       justify-content: space-between;
       padding: 1rem;
       margin-top: 1rem;
       width: 100%;
+      grid-area: heading;
 
-      h2{
+      h2 {
         font-weight: 700;
         color: #03293d;
       }
     }
-    .content-left, .content-right{
-      width: 49%;
+    .content-right {
+      grid-area: content2;
     }
+    // .content-left,
+    // .content-right {
+    //   width: 49%;
+    // }
     .content-left {
       display: flex;
       flex-direction: column;
+      grid-area: content1;
 
       .content-cards {
         display: flex;
@@ -164,9 +178,9 @@ body {
     .card {
       padding: 1rem;
       background: #fff;
-      margin: 1rem;
+      margin: 1rem 0;
       display: flex;
-      width: 50%;
+      width: 49%;
       color: rgba(3, 41, 61, 0.5);
       align-items: flex-start;
       justify-content: space-between;
@@ -216,9 +230,9 @@ body {
     .card2 {
       padding: 1rem;
       background: #fff;
-      margin: 1rem;
+      margin: 1rem 0;
       display: flex;
-      width: 50%;
+      width: 49%;
       color: rgba(3, 41, 61, 0.5);
       align-items: flex-start;
       justify-content: space-between;
@@ -269,9 +283,9 @@ body {
     .pie {
       padding: 1rem;
       background: #fff;
-      margin: 1rem;
+      margin: 1rem 0;
       display: flex;
-      width: 96%;
+      width: 100%;
       color: rgba(3, 41, 61, 0.5);
       align-items: flex-start;
       justify-content: space-between;
@@ -292,14 +306,14 @@ body {
         width: 100%;
         align-items: center;
         position: relative;
-        ul{
+        ul {
           padding-left: 1rem;
-          li{
+          li {
             list-style: none;
             display: flex;
             align-items: center;
             margin: 1rem 0;
-            .color-icon{
+            .color-icon {
               width: 15px;
               display: block;
               border-radius: 50%;
@@ -307,13 +321,13 @@ body {
               margin-right: 8px;
             }
 
-            .text-bold{
+            .text-bold {
               margin-right: 1rem;
               color: #03293d;
             }
           }
         }
-        .caption-container{
+        .caption-container {
           position: absolute;
           display: flex;
           left: 4rem;
@@ -321,11 +335,11 @@ body {
           // justify-content: center;
           text-align: center;
           // width: 70px;
-          .text-bold{
+          .text-bold {
             color: #03293d;
             width: 70%;
           }
-          .caption{
+          .caption {
             font-size: 11px;
             width: 70%;
           }
@@ -343,10 +357,10 @@ body {
       }
     }
 
-    .bar{
+    .bar {
       padding: 1rem;
       background: #fff;
-      margin: 1rem;
+      margin: 1rem 0;
       display: flex;
       width: 100%;
       color: rgba(3, 41, 61, 0.5);
@@ -364,30 +378,29 @@ body {
           color: rgba(3, 41, 61, 0.15);
         }
       }
-      .work-content{
+      .work-content {
         display: flex;
         .text-bold {
           font-size: 1.75rem;
           color: #03293d;
         }
-        .mid-span{
+        .mid-span {
           margin: 0 2.5rem;
         }
-        
       }
-      .barchart{
-        ul{
+      .barchart {
+        ul {
           padding-left: 1rem;
           display: grid;
           // place-items: center;
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            
-          li{
+
+          li {
             list-style: none;
             display: flex;
             align-items: center;
-            margin: .5rem 0;
-            .color-icon{
+            margin: 0.5rem 0;
+            .color-icon {
               width: 15px;
               display: block;
               border-radius: 50%;
@@ -395,7 +408,7 @@ body {
               margin-right: 8px;
             }
 
-            .text-bold{
+            .text-bold {
               margin-right: 1rem;
               // color: ;
               color: #03293d;
@@ -404,10 +417,10 @@ body {
         }
       }
     }
-    .idleBar{
+    .idleBar {
       padding: 1rem;
       background: #fff;
-      margin: 1rem;
+      margin: 1rem 0;
       display: flex;
       width: 100%;
       color: rgba(3, 41, 61, 0.5);
@@ -427,16 +440,16 @@ body {
           margin-left: 1rem;
           color: rgba(3, 41, 61, 0.15);
         }
-        ul{
+        ul {
           padding-left: 1rem;
           display: flex;
           margin-bottom: 0;
-          li{
+          li {
             list-style: none;
             display: flex;
             align-items: center;
-            margin: 0 1rem ;
-            .color-icon{
+            margin: 0 1rem;
+            .color-icon {
               width: 15px;
               display: block;
               border-radius: 50%;
@@ -444,7 +457,7 @@ body {
               margin-right: 8px;
             }
 
-            .text-bold{
+            .text-bold {
               margin-right: 1rem;
               color: #03293d;
             }
@@ -453,16 +466,17 @@ body {
       }
     }
 
-    .content-bottom{
+    .content-bottom {
       width: 100%;
-      .card-container{
+      grid-area: footer;
+      .card-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));;
+        grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
         grid-gap: 10px;
-        .graphcard{
+        .graphcard {
           padding: 1rem;
           background: #fff;
-          margin: 1rem;
+          margin: 1rem 0;
           display: flex;
           width: 100%;
           color: rgba(3, 41, 61, 0.5);
@@ -483,15 +497,67 @@ body {
               color: rgba(3, 41, 61, 0.15);
             }
           }
-          .chart{
+          .chart {
             display: flex;
             justify-content: space-between;
-            h2{
+            h2 {
               font-size: 32px;
             }
           }
         }
       }
     }
+  }
+}
+@media screen and (max-width: 850px) {
+  .content-main aside {
+    display: none;
+  }
+  .content-main .content {
+    width: 90%;
+    .pie,
+    .content-cards {
+      width: 100%;
+    }
+    .menuicon {
+      position: absolute;
+      top: -1rem;
+      right: -0.5rem;
+    }
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    // align-items: center;
+    // place-items: center;
+    grid-template-areas:
+      "heading  "
+      "content1  "
+      "content2  "
+      "footer   ";
+  }
+}
+@media screen and (min-width: 850px) and (max-width: 1375px) {
+  .content-main .content {
+    .pie,
+    .content-cards {
+      width: 100%;
+    }
+    .menuicon {
+      position: absolute;
+      top: -1rem;
+      right: -0.5rem;
+    }
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    // align-items: center;
+    // place-items: center;
+    grid-template-areas:
+      "heading heading heading "
+      "content1 content1 content1"
+      "content2 content2 content2"
+      "footer footer footer ";
   }
 }

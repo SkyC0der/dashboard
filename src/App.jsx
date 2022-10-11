@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import './style.scss'
+import './styles/style.scss'
 import Navbar from './components/Navbar'
 
 function App() {

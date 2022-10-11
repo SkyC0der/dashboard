@@ -148,7 +148,7 @@ const Navbar = () => {
           <div className="content-main">
             <Sider className="site-layout-background" width={190}>
               <div className="siderHeading">
-                <Title/>
+                <Title />
                 <span className="header">Workflows</span>
                 <Select defaultValue="Product Dev">
                   <Option value="Product Dev">Product Dev</Option>
@@ -158,16 +158,13 @@ const Navbar = () => {
                 mode="inline"
                 defaultSelectedKeys={["3"]}
                 defaultOpenKeys={["1"]}
-                style={{
-                  height: "100%",
-                }}
                 items={menuData2}
               />
             </Sider>
             <div className="content">
               <div className="headingContent">
                 <div className="menuicon">
-                  <EllipsisOutlined style={{fontSize: "28px"}} />
+                  <EllipsisOutlined style={{ fontSize: "28px" }} />
                 </div>
                 <h2>Project Stats</h2>
                 <Select
