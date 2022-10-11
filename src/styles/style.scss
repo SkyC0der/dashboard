@@ -392,6 +392,7 @@ body {
         ul {
           padding-left: 1rem;
           display: grid;
+          margin-bottom: -4px;
           // place-items: center;
           grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 
